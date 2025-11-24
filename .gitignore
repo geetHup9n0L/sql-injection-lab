@@ -1,0 +1,3 @@
+app/data/lab.db
+app/logs/*.log
+__pycache__/
