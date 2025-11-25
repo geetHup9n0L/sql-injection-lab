@@ -1,4 +1,4 @@
-# Writeup: SQLi Lab (compact)
+# Writeup: SQLi Lab 
 
 ## Vulnerability
 - `/login` builds SQL by concatenating username/password into the query string.
