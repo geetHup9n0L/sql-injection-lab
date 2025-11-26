@@ -8,15 +8,17 @@ Quick start (local):
 1. Create the DB:
    
    `cd /app`
+   
    `python3 data/init_db.py`
    
-2. Run the vulnerable app:
+3. Run the vulnerable app:
 
    `python3 vuln_app.py`
    
-3. In another terminal run the exploit:
+4. In another terminal run the exploit:
 
    `python3 ../exploit/exploit_sqli.py`
+
    
 
 Or use Docker:
