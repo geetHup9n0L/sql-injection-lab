@@ -1,4 +1,4 @@
-Our program resides in this root directory:
+### Our program resides in this directory:
 ```
 \sql-injection-lab\app
 ```
@@ -20,7 +20,7 @@ Access via: `127.0.0.1:5000`
 
 <img width="565" height="362" alt="image" src="https://github.com/user-attachments/assets/f635e6d5-3026-45fd-aaa5-bb3421eb5eac" />
 
-Two accessible routes or subpages in this app
+### Two accessible routes or subpages in this app
 
 * `http://127.0.0.1:5000/login`
 
