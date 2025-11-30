@@ -32,6 +32,7 @@ Access via: `127.0.0.1:5000`
 
 <img width="1231" height="500" alt="image" src="https://github.com/user-attachments/assets/87809967-0c19-424b-a3c0-a82da11f1cca" />
 
+
 The intended SQLi injection vulnerbility is located at `/search` subpage
 
 With the `/search?q=` purposely take user input as SQL parameter, fill in the query placeholder:
