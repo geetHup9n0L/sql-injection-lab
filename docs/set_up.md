@@ -85,7 +85,7 @@ Inside, a log data called: `/app.log` is generated and records suspicuous activi
 The logs track times, alerts and exact possible SQL injected query 
 
 Here is an example:
-```log
+```sql
 2025-11-23 20:12:01 INFO SQL EXEC: SELECT id, name, description FROM products WHERE name LIKE '%' UNION SELECT 1, group_concat(name, ';'), 3 FROM sqlite_master WHERE type='table' -- %';
 2025-11-23 20:12:01 WARNING Possible SQLi payload from 127.0.0.1: ' UNION SELECT 1, group_concat(name, ';'), 3 FROM sqlite_master WHERE type='table' -- 
 ```
