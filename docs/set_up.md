@@ -63,3 +63,8 @@ The script has 2 stages:
   ```sql
   ' UNION SELECT 1, group_concat(username || ':' || password, ';'), 3 FROM users --
   ```
+
+### Checking logs at `/logs` folder
+A log data called: `/app.log` is generated and records suspicuous activities inluding peculiar SQL queries.
+
+The logs track times, alerts and exact possible SQL injected query 
