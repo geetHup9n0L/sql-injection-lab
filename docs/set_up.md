@@ -65,32 +65,27 @@ The script has 2 stages:
   ```
 
 ### Checking logs at `/logs` folder
-In this lab, folder `/logs` only created at runtime, when the app starts logging. 
+In this lab, folder `/logs` only created at runtime, when the app starts logging. This is due to the cases of data sensitivity, logs renewal  
 
 `.gitignore` contains:
 ```
 log/
 *.log
 ```
-any log directory or log file will NOT be included in commits
+-> any log directory or log file will NOT be included in commits
 
+Create directory for /log/:
 ```python
 LOG = os.path.join(BASE, 'logs', 'app.log')
 os.makedirs(os.path.join(BASE, 'logs'), exist_ok=True)
 ```
-
-This is because:
-  * Log files contain sensitive data.
-  
-  * Log files constantly change.
-  
-  * We should never commit logs to version control.
 
 Inside, a log data called: `/app.log` is generated and records suspicuous activities inluding peculiar SQL queries.
 
 The logs track times, alerts and exact possible SQL injected query 
 
 Here is an example:
-```
-
+```log
+2025-11-23 20:12:01 INFO SQL EXEC: SELECT id, name, description FROM products WHERE name LIKE '%' UNION SELECT 1, group_concat(name, ';'), 3 FROM sqlite_master WHERE type='table' -- %';
+2025-11-23 20:12:01 WARNING Possible SQLi payload from 127.0.0.1: ' UNION SELECT 1, group_concat(name, ';'), 3 FROM sqlite_master WHERE type='table' -- 
 ```
