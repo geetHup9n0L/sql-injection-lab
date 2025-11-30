@@ -22,9 +22,11 @@ Access via: `127.0.0.1:5000`
 
 Two accessible routes or subpages in this app
 
-`http://127.0.0.1:5000/login`
+* `http://127.0.0.1:5000/login`
+
 <img width="674" height="443" alt="image" src="https://github.com/user-attachments/assets/e936114f-b675-4bfe-b147-b00a9431e27a" />
 
-`http://127.0.0.1:5000/search`
+* `http://127.0.0.1:5000/search`
+
 <img width="1231" height="500" alt="image" src="https://github.com/user-attachments/assets/87809967-0c19-424b-a3c0-a82da11f1cca" />
 
