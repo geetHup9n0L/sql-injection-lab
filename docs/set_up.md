@@ -65,7 +65,26 @@ The script has 2 stages:
   ```
 
 ### Checking logs at `/logs` folder
-In this lab, folder `/logs` only created at runtime, when the app starts logging 
+In this lab, folder `/logs` only created at runtime, when the app starts logging. 
+
+`.gitignore` contains:
+```
+log/
+*.log
+```
+any log directory or log file will NOT be included in commits
+
+```python
+LOG = os.path.join(BASE, 'logs', 'app.log')
+os.makedirs(os.path.join(BASE, 'logs'), exist_ok=True)
+```
+
+This is because:
+  * Log files contain sensitive data.
+  
+  * Log files constantly change.
+  
+  * We should never commit logs to version control.
 
 Inside, a log data called: `/app.log` is generated and records suspicuous activities inluding peculiar SQL queries.
 
